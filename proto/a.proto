@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package proto;
+
+service PersonService {
+    rpc SayHello (Send) returns (Say) {
+    }
+}
+
+message Send {
+    string name = 1;
+    int32 age = 2;
+    repeated string hobby = 3;
+}
+
+message Say {
+    string number = 1;
+    Sex sex = 2;
+}
+
+enum Sex {
+    NO = 0;
+    MAN = 1;
+    WOMAN = 2;
+}
