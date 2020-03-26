@@ -1,4 +1,4 @@
-//package elasticsearch
+package elasticsearch
 //
 //import "github.com/elastic/go-elasticsearch/v6"
 //
