@@ -17,10 +17,10 @@ type App struct {
 	ImageMaxSize   int
 	ImageAllowExts []string
 
-	LogSavePath string
-	LogSaveName string
-	LogFileExt  string
-	TimeFormat  string
+	LogSavePath    string
+	LogSaveName    string
+	LogFileExt     string
+	TimeFormat     string
 	QrCodeSavePath string
 }
 
@@ -56,6 +56,17 @@ type Redis struct {
 
 var RedisSetting = &Redis{}
 
+type Elasticsearch struct {
+	Host        string
+	Port        int
+	Password    string
+	MaxIdle     int
+	MaxActive   int
+	IdleTimeout time.Duration
+}
+
+var ElasticsearchSetting = &Elasticsearch{}
+
 func Setup() {
 	Cfg, err := ini.Load("conf/app.ini")
 	if err != nil {
@@ -85,5 +96,10 @@ func Setup() {
 	err = Cfg.Section("redis").MapTo(RedisSetting)
 	if err != nil {
 		log.Fatalf("Cfg.MapTo RedisSetting err: %v", err)
+	}
+
+	err = Cfg.Section("elasticsearch").MapTo(ElasticsearchSetting)
+	if err != nil {
+		log.Fatalf("Cfg.MapTo ElasticsearchSetting err: %v", err)
 	}
 }

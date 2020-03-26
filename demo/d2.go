@@ -1,18 +1,16 @@
 package main
 
 import (
-	"code.shihuo.cn/gin-demo/data"
-	"log"
-	"net/http"
+	"fmt"
 	_ "net/http/pprof"
+	"net/url"
 )
 
 func main() {
-	go func() {
-		for {
-			log.Println(data.Add("https://www.baidu.com"))
-		}
-	}()
+	var us = url.Values{}
+	us.Set("name", "han")
+	us.Add("age", "10")
+	us.Add("age", "12")
 
-	http.ListenAndServe("0.0.0.0:6060", nil)
+	fmt.Println(us.Get("name"), us.Get("age"))
 }
