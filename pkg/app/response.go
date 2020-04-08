@@ -1,7 +1,7 @@
 package app
 
 import (
-	"code.shihuo.cn/gin-demo/pkg/e"
+	"hanxiaolin/gin-demo/pkg/e"
 	"github.com/gin-gonic/gin"
 )
 

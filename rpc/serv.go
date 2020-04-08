@@ -1,7 +1,7 @@
 package rpc
 
 import (
-	pb "code.shihuo.cn/gin-demo/proto"
+	pb "hanxiaolin/gin-demo/proto"
 	"context"
 	"fmt"
 	"google.golang.org/grpc"

@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"time"
 
-	"code.shihuo.cn/gin-demo/pkg/e"
-	"code.shihuo.cn/gin-demo/pkg/util"
+	"hanxiaolin/gin-demo/pkg/e"
+	"hanxiaolin/gin-demo/pkg/util"
 
 	"github.com/gin-gonic/gin"
 )

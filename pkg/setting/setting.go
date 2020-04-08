@@ -58,7 +58,8 @@ var RedisSetting = &Redis{}
 
 type Elasticsearch struct {
 	Host        string
-	Port        int
+	Port        string
+	User        string
 	Password    string
 	MaxIdle     int
 	MaxActive   int

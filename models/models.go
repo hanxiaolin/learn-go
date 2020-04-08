@@ -1,7 +1,7 @@
 package models
 
 import (
-	"code.shihuo.cn/gin-demo/pkg/setting"
+	"hanxiaolin/gin-demo/pkg/setting"
 	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"

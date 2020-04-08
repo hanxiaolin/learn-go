@@ -1,11 +1,11 @@
 package upload
 
 import (
-	"code.shihuo.cn/gin-demo/logging"
-	"code.shihuo.cn/gin-demo/pkg/file"
-	"code.shihuo.cn/gin-demo/pkg/setting"
-	"code.shihuo.cn/gin-demo/pkg/util"
 	"fmt"
+	"hanxiaolin/gin-demo/logging"
+	"hanxiaolin/gin-demo/pkg/file"
+	"hanxiaolin/gin-demo/pkg/setting"
+	"hanxiaolin/gin-demo/pkg/util"
 	"log"
 	"mime/multipart"
 	"os"

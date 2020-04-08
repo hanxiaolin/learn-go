@@ -7,10 +7,17 @@ import (
 )
 
 func main() {
+	// url values
 	var us = url.Values{}
 	us.Set("name", "han")
 	us.Add("age", "10")
 	us.Add("age", "12")
 
-	fmt.Println(us.Get("name"), us.Get("age"))
+	fmt.Println(us.Get("name"), us.Get("age"), us.Encode())
+
+	// parse
+	u, _ := url.Parse("http://bing.com/search?q=dotnet")
+	uu := u.Query()
+
+	fmt.Println(u.Path, u.Host, uu.Get("q"))
 }

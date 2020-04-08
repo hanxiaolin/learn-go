@@ -1,15 +1,15 @@
 package v1
 
 import (
-	"code.shihuo.cn/gin-demo/logging"
-	"code.shihuo.cn/gin-demo/models"
-	"code.shihuo.cn/gin-demo/models/rep"
-	"code.shihuo.cn/gin-demo/pkg/e"
-	"code.shihuo.cn/gin-demo/pkg/setting"
-	"code.shihuo.cn/gin-demo/pkg/util"
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
 	"github.com/unknwon/com"
+	"hanxiaolin/gin-demo/logging"
+	"hanxiaolin/gin-demo/models"
+	"hanxiaolin/gin-demo/models/rep"
+	"hanxiaolin/gin-demo/pkg/e"
+	"hanxiaolin/gin-demo/pkg/setting"
+	"hanxiaolin/gin-demo/pkg/util"
 	"net/http"
 )
 
@@ -126,7 +126,7 @@ func DeleteTag(c *gin.Context) {
 	valid.Min(id, 1, "id").Message("ID必须大于0")
 
 	code := e.INVALID_PARAMS
-	if ! valid.HasErrors() {
+	if !valid.HasErrors() {
 		code = e.SUCCESS
 		if models.ExistTagByID(id) {
 			models.DeleteTag(id)

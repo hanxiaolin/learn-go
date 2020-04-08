@@ -1,7 +1,7 @@
 package app
 
 import (
-	"code.shihuo.cn/gin-demo/logging"
+	"hanxiaolin/gin-demo/logging"
 	"github.com/astaxie/beego/validation"
 )
 

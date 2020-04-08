@@ -3,7 +3,7 @@ package util
 import (
 	"time"
 
-	"code.shihuo.cn/gin-demo/pkg/setting"
+	"hanxiaolin/gin-demo/pkg/setting"
 
 	"github.com/dgrijalva/jwt-go"
 )

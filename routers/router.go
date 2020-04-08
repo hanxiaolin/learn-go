@@ -1,11 +1,11 @@
 package routers
 
 import (
-	_ "code.shihuo.cn/gin-demo/docs"
-	"code.shihuo.cn/gin-demo/middleware/jwt"
-	"code.shihuo.cn/gin-demo/pkg/setting"
-	"code.shihuo.cn/gin-demo/routers/api"
-	"code.shihuo.cn/gin-demo/routers/api/v1"
+	_ "hanxiaolin/gin-demo/docs"
+	"hanxiaolin/gin-demo/middleware/jwt"
+	"hanxiaolin/gin-demo/pkg/setting"
+	"hanxiaolin/gin-demo/routers/api"
+	"hanxiaolin/gin-demo/routers/api/v1"
 	"github.com/gin-gonic/gin"
 
 	"github.com/swaggo/gin-swagger"

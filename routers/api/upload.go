@@ -1,9 +1,9 @@
 package api
 
 import (
-	"code.shihuo.cn/gin-demo/logging"
-	"code.shihuo.cn/gin-demo/pkg/e"
-	"code.shihuo.cn/gin-demo/pkg/upload"
+	"hanxiaolin/gin-demo/logging"
+	"hanxiaolin/gin-demo/pkg/e"
+	"hanxiaolin/gin-demo/pkg/upload"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -33,7 +33,7 @@ func UploadImage(c *gin.Context) {
 		savePath := upload.GetImagePath()
 
 		src := fullPath + imageName
-		if ! upload.CheckImageExt(imageName) || ! upload.CheckImageSize(file) {
+		if !upload.CheckImageExt(imageName) || !upload.CheckImageSize(file) {
 			code = e.ERROR_UPLOAD_CHECK_IMAGE_FORMAT
 		} else {
 			err := upload.CheckImage(fullPath)

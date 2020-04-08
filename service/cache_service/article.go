@@ -1,7 +1,7 @@
 package cache_service
 
 import (
-	"code.shihuo.cn/gin-demo/pkg/e"
+	"hanxiaolin/gin-demo/pkg/e"
 	"strconv"
 	"strings"
 )

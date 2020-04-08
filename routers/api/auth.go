@@ -1,12 +1,12 @@
 package api
 
 import (
-	"code.shihuo.cn/gin-demo/logging"
+	"hanxiaolin/gin-demo/logging"
 	"net/http"
 
-	"code.shihuo.cn/gin-demo/models"
-	"code.shihuo.cn/gin-demo/pkg/e"
-	"code.shihuo.cn/gin-demo/pkg/util"
+	"hanxiaolin/gin-demo/models"
+	"hanxiaolin/gin-demo/pkg/e"
+	"hanxiaolin/gin-demo/pkg/util"
 
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"

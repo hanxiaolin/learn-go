@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"code.shihuo.cn/gin-demo/pkg/file"
-	"code.shihuo.cn/gin-demo/pkg/setting"
+	"hanxiaolin/gin-demo/pkg/file"
+	"hanxiaolin/gin-demo/pkg/setting"
 )
 
 func getLogFilePath() string {

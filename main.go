@@ -1,11 +1,11 @@
 package main
 
 import (
-	"code.shihuo.cn/gin-demo/logging"
-	"code.shihuo.cn/gin-demo/models"
-	"code.shihuo.cn/gin-demo/pkg/gredis"
-	"code.shihuo.cn/gin-demo/pkg/setting"
-	"code.shihuo.cn/gin-demo/routers"
+	"hanxiaolin/gin-demo/logging"
+	"hanxiaolin/gin-demo/models"
+	"hanxiaolin/gin-demo/pkg/gredis"
+	"hanxiaolin/gin-demo/pkg/setting"
+	"hanxiaolin/gin-demo/routers"
 	"fmt"
 	"github.com/fvbock/endless"
 	"log"

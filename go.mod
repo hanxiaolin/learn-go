@@ -1,4 +1,4 @@
-module code.shihuo.cn/gin-demo
+module hanxiaolin/gin-demo
 
 go 1.13
 

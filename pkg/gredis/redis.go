@@ -1,8 +1,8 @@
 package gredis
 
 import (
-	"code.shihuo.cn/gin-demo/pkg/setting"
 	"encoding/json"
+	"hanxiaolin/gin-demo/pkg/setting"
 	"time"
 
 	"github.com/gomodule/redigo/redis"

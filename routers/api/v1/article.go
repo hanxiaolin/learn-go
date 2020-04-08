@@ -1,17 +1,17 @@
 package v1
 
 import (
-	"code.shihuo.cn/gin-demo/models"
-	"code.shihuo.cn/gin-demo/pkg/app"
-	"code.shihuo.cn/gin-demo/pkg/e"
-	"code.shihuo.cn/gin-demo/pkg/qrcode"
-	"code.shihuo.cn/gin-demo/pkg/setting"
-	"code.shihuo.cn/gin-demo/pkg/util"
-	"code.shihuo.cn/gin-demo/service/article_service"
 	"github.com/astaxie/beego/validation"
 	"github.com/boombuler/barcode/qr"
 	"github.com/gin-gonic/gin"
 	"github.com/unknwon/com"
+	"hanxiaolin/gin-demo/models"
+	"hanxiaolin/gin-demo/pkg/app"
+	"hanxiaolin/gin-demo/pkg/e"
+	"hanxiaolin/gin-demo/pkg/qrcode"
+	"hanxiaolin/gin-demo/pkg/setting"
+	"hanxiaolin/gin-demo/pkg/util"
+	"hanxiaolin/gin-demo/service/article_service"
 	"log"
 	"net/http"
 )
@@ -76,7 +76,7 @@ func GetArticles(c *gin.Context) {
 	}
 
 	code := e.INVALID_PARAMS
-	if ! valid.HasErrors() {
+	if !valid.HasErrors() {
 		code = e.SUCCESS
 
 		data["lists"] = models.GetArticles(util.GetPage(c), setting.AppSetting.PageSize, maps)
@@ -113,7 +113,7 @@ func AddArticle(c *gin.Context) {
 	valid.Range(state, 0, 1, "state").Message("状态只允许0或1")
 
 	code := e.INVALID_PARAMS
-	if ! valid.HasErrors() {
+	if !valid.HasErrors() {
 		if models.ExistTagByID(tagId) {
 			data := make(map[string]interface{})
 			data["tag_id"] = tagId
@@ -166,7 +166,7 @@ func EditArticle(c *gin.Context) {
 	valid.MaxSize(modifiedBy, 100, "modified_by").Message("修改人最长为100字符")
 
 	code := e.INVALID_PARAMS
-	if ! valid.HasErrors() {
+	if !valid.HasErrors() {
 		if isExist, _ := models.ExistArticleByID(id); isExist {
 			if models.ExistTagByID(tagId) {
 				data := make(map[string]interface{})
@@ -214,7 +214,7 @@ func DeleteArticle(c *gin.Context) {
 	valid.Min(id, 1, "id").Message("ID必须大于0")
 
 	code := e.INVALID_PARAMS
-	if ! valid.HasErrors() {
+	if !valid.HasErrors() {
 		if isExist, _ := models.ExistArticleByID(id); isExist {
 			models.DeleteArticle(id)
 			code = e.SUCCESS
